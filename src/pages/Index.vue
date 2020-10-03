@@ -2,12 +2,11 @@
   <Layout>
 
     <!-- Learn how to use images here: https://gridsome.org/docs/images -->
-    <g-image alt="Example image" src="~/favicon.png" width="100" />
-
-    <h1>Gridsome Test Pages</h1>
+    <g-image alt="Site image" src="~/Original.png" width="400" />
 
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
+        Compete with your rivals at traditional single player games such as
+        Sudoku, Codewords etc ... See if you can become overall champion.
     </p>
 
     <p class="home-links">
@@ -19,11 +18,15 @@
 </template>
 
 <script lang="ts">
-export default {
-  metaInfo: {
-    title: 'Gridsome Test Page'
-  }
-}
+
+    console.log(`I am in the Index page`);
+
+    export default {
+      metaInfo: {
+        title: 'Puzzle Bouts'
+      }
+    }
+
 </script>
 
 <style>
