@@ -8,7 +8,7 @@ import { MiniSudokuBackground } from './minisudoku_background';
 import { MiniSudokuDecoration } from './minisudoku_decoration';
 import { MiniSudokuFixedValue } from './minisudoku_fixedvalue';
 import { MiniSudokuUserValue } from './minisudoku_uservalue';
-import { translateMouseCoordsToBoardCoords } from '../../../utility';
+// import { translateMouseCoordsToBoardCoords } from '../../../utility';
 import { IMediator } from '../../../interfaces/IMediator';
 import { CellState } from '../../abstracts/component_state';
 import { KeyEvent, ClickEvent, DrawEvent } from '../../events';
@@ -18,18 +18,18 @@ import { KeyEvent, ClickEvent, DrawEvent } from '../../events';
 //
 export class MiniSudokuCell extends AbstractBoardComponent {
     
-    private _background: MiniSudokuBackground;
-    private _decoration: MiniSudokuDecoration;
-    private _fixedValue: MiniSudokuFixedValue;
-    private _userValue: MiniSudokuUserValue;
-    private _isfixed: boolean;
+    private _background!: MiniSudokuBackground;
+    private _decoration!: MiniSudokuDecoration;
+    private _fixedValue!: MiniSudokuFixedValue;
+    private _userValue!: MiniSudokuUserValue;
+    private _isfixed!: boolean;
 
-    private _up: MiniSudokuCell;
-    private _down: MiniSudokuCell;
-    private _left: MiniSudokuCell;
-    private _right: MiniSudokuCell;
+    private _up!: MiniSudokuCell;
+    private _down!: MiniSudokuCell;
+    private _left!: MiniSudokuCell;
+    private _right!: MiniSudokuCell;
 
-    public state: CellState;
+    public state!: CellState;
 
     constructor(
         parent: AbstractBoardComponent,

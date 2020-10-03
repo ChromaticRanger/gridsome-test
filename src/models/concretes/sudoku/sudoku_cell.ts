@@ -1,10 +1,19 @@
 
-import { AbstractGameCell } from '../../abstracts/abstract_gamecell';
+import { AbstractBoardComponent } from '../../abstracts/abstract_boardcomponent';
+import { Coord } from '../../coord';
+import { ComponentType } from '../../componenttype';
 
 //
 // SudokuCell extends GameCell
 //
-export class SudokuCell extends AbstractGameCell {
+export class SudokuCell extends AbstractBoardComponent {
+    
+    public getComponent(coord: Coord, comptype: ComponentType, canvas_width: number, canvas_height: number): AbstractBoardComponent {
+        throw new Error("Method not implemented.");
+    }
+    public getComponents(coord: import("../../coord").Coord): AbstractBoardComponent[] {
+        throw new Error("Method not implemented.");
+    }
     
     constructor(x_pos: number, y_pos: number) {
         super();

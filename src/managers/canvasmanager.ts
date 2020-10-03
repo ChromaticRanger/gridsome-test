@@ -1,7 +1,7 @@
 
-import { Rectangle } from "../models/rect";
-import { Coord } from "../models/coord";
-import { SystemColors } from "../utility";
+import { Rectangle } from '../models/rect';
+import { Coord } from '../models/coord';
+// import { SystemColors } from '../utility';
 
 export class CanvasManager {
 
@@ -9,8 +9,8 @@ export class CanvasManager {
     private _ctx: CanvasRenderingContext2D;
     private _width: number;
     private _height: number;
-    private original_width: number;
-    private original_height: number;
+    private original_width: number = 0;
+    private original_height: number = 0;
 
 
     constructor(

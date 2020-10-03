@@ -1,6 +1,6 @@
 
 import { IDrawComponent } from '../../../interfaces/IDrawComponent';
-import { SystemColors, translateMouseCoordsToBoardCoords } from '../../../utility';
+import { translateMouseCoordsToBoardCoords } from '../../../utility';
 import { IClickComponent } from '../../../interfaces/IClickComponent';
 import { Coord } from '../../coord';
 import { ComponentType } from '../../componenttype';
@@ -20,7 +20,7 @@ import { DrawEvent } from '../../events';
 //
 export class MiniSudokuBoard extends AbstractBoardComponent {
 
-    private _activeCell: MiniSudokuCell;
+    private _activeCell!: MiniSudokuCell;
 
     constructor(
         parent: AbstractBoardComponent,
@@ -32,7 +32,7 @@ export class MiniSudokuBoard extends AbstractBoardComponent {
         this.id = this.getParent().id;
         this.rows = this.getParent().rows;
         this.cols = this.getParent().cols;
-        this.color = SystemColors.BLACK; // TODO make the color user definable
+        this.color = '#000000'; // TODO make the color user definable
         this.x_pos = 0;
         this.y_pos = 0;
         this.mediator = mediator;

@@ -13,7 +13,7 @@ import { MiniSudokuUserValue } from '../concretes/minisudoku/minisudoku_uservalu
 import { IKeyComponent } from '../../interfaces/IKeyComponent';
 import { IEvent } from '../../interfaces/IEvent';
 import { DrawEvent, ClickEvent, KeyEvent } from '../events';
-import { SystemKeys } from '../../utility';
+// import { SystemKeys } from '../../utility';
 
 //
 // The Mediator that will control the communication between components in
@@ -25,7 +25,7 @@ export class MiniSudokuMediator implements IMediator {
     private drawer: IDrawComponent; 
     private clicker: IClickComponent; 
     private keyer: IKeyComponent;
-    private _board: MiniSudokuBoard;
+    private _board!: MiniSudokuBoard;
 
     constructor(
         drawer: IDrawComponent,
@@ -162,32 +162,32 @@ export class MiniSudokuMediator implements IMediator {
                         
                         switch (event.code) {
 
-                            case SystemKeys.VIM_LEFT:
-                            case SystemKeys.LEFT_ARROW: {
+                            case 72:
+                            case 37: {
                                 this.move(cell.Left);
                                 break;
                             }
 
-                            case SystemKeys.VIM_UP:
-                            case SystemKeys.UP_ARROW: {
+                            case 75:
+                            case 38: {
                                 this.move(cell.Up);
                                 break;
                             }
 
-                            case SystemKeys.VIM_RIGHT:
-                            case SystemKeys.RIGHT_ARROW: {
+                            case 76:
+                            case 39: {
                                 this.move(cell.Right);
                                 break;
                             }
 
-                            case SystemKeys.VIM_DOWN:
-                            case SystemKeys.DOWN_ARROW: {
+                            case 74:
+                            case 40: {
                                 this.move(cell.Down);
                                 break;
                             }
 
-                            case SystemKeys.PAD_ONE:
-                            case SystemKeys.ONE: {
+                            case 97:
+                            case 49: {
 
                                 if (!cell.IsFixed) {
                                     cell.UserValue.value = "1";
@@ -197,8 +197,8 @@ export class MiniSudokuMediator implements IMediator {
                                 break;
                             }
                             
-                            case SystemKeys.PAD_TWO:
-                            case SystemKeys.TWO: {
+                            case 98:
+                            case 50: {
                                 if (!cell.IsFixed) {
                                     cell.UserValue.value = "2";
                                     this.drawer.drawCell(sender);
@@ -206,8 +206,8 @@ export class MiniSudokuMediator implements IMediator {
                                 break;
                             }
 
-                            case SystemKeys.PAD_THREE:
-                            case SystemKeys.THREE: {
+                            case 99:
+                            case 51: {
                                 if (!cell.IsFixed) {
                                     cell.UserValue.value = "3";
                                     this.drawer.drawCell(sender);
@@ -215,8 +215,8 @@ export class MiniSudokuMediator implements IMediator {
                                 break;
                             }
                             
-                            case SystemKeys.PAD_FOUR:
-                            case SystemKeys.FOUR: {
+                            case 100:
+                            case 52: {
                                 if (!cell.IsFixed) {
                                     cell.UserValue.value = "4";
                                     this.drawer.drawCell(sender);

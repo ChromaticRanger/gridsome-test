@@ -8,7 +8,7 @@ import { MiniSudokuBackground } from '../concretes/minisudoku/minisudoku_backgro
 import { MiniSudokuDecoration } from '../concretes/minisudoku/minisudoku_decoration';
 import { MiniSudokuFixedValue } from '../concretes/minisudoku/minisudoku_fixedvalue';
 import { MiniSudokuUserValue } from '../concretes/minisudoku/minisudoku_uservalue';
-import { SystemColors } from '../../utility';
+// import { SystemColors } from '../../utility';
 import { IMediator } from '../../interfaces/IMediator';
 import { PassiveCellState } from '../concretes/minisudoku/cell_passive_state';
 import { ActiveCellState } from '../concretes/minisudoku/cell_active_state';
@@ -52,10 +52,10 @@ export class MiniSudokuBuilder implements IBuilder {
             let row = rows[i];
             for (let j:number = 0; j < row.length; j++) {                
                 let cell = new MiniSudokuCell(board, j, i, this.mediator, new PassiveCellState());
-                cell.add(new MiniSudokuBackground(cell, SystemColors.WHITE, SystemColors.LIGHT_PURPLE, this.mediator));
-                cell.add(new MiniSudokuDecoration(cell, SystemColors.BLACK, "", this.mediator));
-                cell.add(new MiniSudokuFixedValue(cell, SystemColors.BLACK, row[j], this.mediator));
-                cell.add(new MiniSudokuUserValue(cell, SystemColors.BLUE, "", this.mediator));
+                cell.add(new MiniSudokuBackground(cell, '#FFFFFF', '#F0E3FE', this.mediator));
+                cell.add(new MiniSudokuDecoration(cell, '#000000', "", this.mediator));
+                cell.add(new MiniSudokuFixedValue(cell, '#000000', row[j], this.mediator));
+                cell.add(new MiniSudokuUserValue(cell, '#0000FF', "", this.mediator));
                 board.add(cell);
             }
         }

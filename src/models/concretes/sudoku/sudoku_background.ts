@@ -1,10 +1,19 @@
 
-import { AbstractBackground } from '../../abstracts/abstract_background';
+import { AbstractBoardComponent } from '../../abstracts/abstract_boardcomponent';
+import { Coord } from '../../coord';
+import { ComponentType } from '../../componenttype';
 
 // 
 // SudokuBackground extends Background which is a composite
 //
-export class SudokuBackground extends AbstractBackground {
+export class SudokuBackground extends AbstractBoardComponent {
+
+    public getComponent(coord: Coord, comptype: ComponentType, canvas_width: number, canvas_height: number): AbstractBoardComponent {
+        throw new Error("Method not implemented.");
+    }
+    public getComponents(coord: Coord): AbstractBoardComponent[] {
+        throw new Error("Method not implemented.");
+    }
 
     constructor(color: string) {
         super();

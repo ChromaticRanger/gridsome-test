@@ -1,15 +1,15 @@
 
 import { Coord } from "./models/coord";
 
-export function getInputValue(elementID: string): string {
-  const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById(elementID);
-  return inputElement.value;
-}
-
-export function logger(message: string): void {
-  console.log(message);
-}
-
+// export function getInputValue(elementID: string): string {
+//   const inputElement: HTMLInputElement = <HTMLInputElement>document.getElementById(elementID);
+//   return inputElement.value;
+// }
+// 
+// export function logger(message: string): void {
+//   console.log(message);
+// }
+// 
 export function translateMouseCoordsToBoardCoords(
     canvas_width: number,
     canvas_height: number,
@@ -25,7 +25,7 @@ export function translateMouseCoordsToBoardCoords(
     let cell_y = Math.floor(mouse_y / row_height);
     return new Coord(cell_x, cell_y);
 }
-
+ 
 export class SystemColors {
     static BLACK: string = '#000000';
     static WHITE: string = '#FFFFFF';

@@ -1,11 +1,21 @@
 
-import { AbstractGameBoard } from '../../abstracts/abstract_gameboard';
+import { AbstractBoardComponent } from '../../abstracts/abstract_boardcomponent';
+import { Coord } from '../../coord';
+import { ComponentType } from '../../componenttype';
 
 //
 // Sudoku board extends the Composite GameBoard
 // So contains the array of cells and declares itself as a composite
 //
-export class SudokuBoard extends AbstractGameBoard {
+export class SudokuBoard extends AbstractBoardComponent {
+
+    public getComponent(coord: Coord, comptype: ComponentType, canvas_width: number, canvas_height: number): AbstractBoardComponent {
+        throw new Error("Method not implemented.");
+    }
+
+    public getComponents(coord: import("../../coord").Coord): AbstractBoardComponent[] {
+        throw new Error("Method not implemented.");
+    }
 
     constructor() {
         super();

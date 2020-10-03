@@ -14,14 +14,14 @@ import { Coord } from './coord';
 export class Rectangle {
 
     private _coord: Coord;
-    private _width: number;
-    private _height: number;
-    private _decor: number | string;
+    private _width: number = 0;
+    private _height: number = 0;
+    private _decor: number | string = '0';
     private _selected: boolean = false;
-    private _value: number;
+    private _value: number = 0;
 
-    private _row_shift: number;
-    private _col_shift: number;
+    private _row_shift: number = 0;
+    private _col_shift: number = 0;
 
     constructor(coord: Coord) {
         this._coord = coord;

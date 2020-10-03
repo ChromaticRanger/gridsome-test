@@ -5,7 +5,7 @@ import { AbstractBoardComponent } from '../abstracts/abstract_boardcomponent';
 
 export abstract class AbstractKeyer implements IKeyComponent {
 
-    public cm: CanvasManager;
+    public cm!: CanvasManager;
 
     public abstract keyGame(game: AbstractBoardComponent): void;    
     public abstract keyBoard(board: AbstractBoardComponent): void; 

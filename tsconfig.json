@@ -1,12 +1,11 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "es2015",
+        "target": "es2015",
+        "module": "commonjs",
         "moduleResolution": "node",
         "noImplicitReturns": true,
         "outDir": "./built/",
-        "sourceMap": true,
-        "strict": true
+        "sourceMap": true
     },
     "include": [
         "./src/**/*"

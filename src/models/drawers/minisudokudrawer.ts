@@ -2,7 +2,7 @@
 import { IDrawComponent } from '../../interfaces/IDrawComponent';
 import { AbstractDrawer } from '../abstracts/abstractdrawer';
 import { CanvasManager } from '../../managers/canvasmanager';
-import { SystemColors } from '../../utility';
+// import { SystemColors } from '../../utility';
 import { MiniSudokuCell } from '../concretes/minisudoku/minisudoku_cell';
 import { MiniSudokuBackground } from '../concretes/minisudoku/minisudoku_background';
 import { MiniSudokuGame } from '../concretes/minisudoku/minisudoku_game';

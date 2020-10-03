@@ -6,27 +6,27 @@ import { IDrawComponent } from '../../interfaces/IDrawComponent';
 import { IClickComponent } from '../../interfaces/IClickComponent';
 import { ComponentType } from '../../models/componenttype';
 import { Coord } from '../coord';
-import { SystemColors } from '../../utility';
+// import { SystemColors } from '../../utility';
 import { IMediator } from '../../interfaces/IMediator';
 import { CellState } from './component_state';
 
 export abstract class AbstractBoardComponent implements 
     IDrawable, IClickable, IKeyHandler {
 
-    protected mediator: IMediator;
+    protected mediator!: IMediator;
    
     public rows: number     = 0;
     public cols: number     = 0;
     public x_pos: number    = 0;
     public y_pos: number    = 0;
-    public color: string    = SystemColors.WHITE;
-    public highlight: string = SystemColors.WHITE; 
+    public color: string    = '#FFFFFF';
+    public highlight: string = '#FFFFFF'; 
     public value: string    = '';
     public name: string     = '';
     public id: string       = '';
     public level: string    = '';
         
-    public parent: AbstractBoardComponent;
+    public parent!: AbstractBoardComponent;
     public children: AbstractBoardComponent[] = [];
     
     // And the ability to add and remove from the collection

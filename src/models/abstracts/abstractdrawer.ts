@@ -5,7 +5,7 @@ import { AbstractBoardComponent } from '../abstracts/abstract_boardcomponent';
 
 export abstract class AbstractDrawer implements IDrawComponent {
 
-    public cm: CanvasManager;
+    public cm!: CanvasManager;
 
     public abstract drawGame(game: AbstractBoardComponent): void;    
     public abstract drawBoard(board: AbstractBoardComponent): void; 

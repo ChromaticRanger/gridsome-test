@@ -1,13 +1,17 @@
 
-import { AbstractBackground } from '../../abstracts/abstract_background';
+import { AbstractBoardComponent } from '../../abstracts/abstract_boardcomponent';
+import { Coord } from '../../coord';
+import { ComponentType } from '../../componenttype';
 
 // 
 // AnagramcrossBackground extends Background which is a composite
 //
-export class AnagramcrossBackground extends AbstractBackground {
-    public getComponent(coord: import("../../coord").Coord, comptype: import("../../componenttype").ComponentType): import("../../abstracts/abstract_boardcomponent").AbstractBoardComponent {
+export class AnagramcrossBackground extends AbstractBoardComponent {
+
+    public getComponent(coord: Coord, comptype: ComponentType): AbstractBoardComponent {
         throw new Error("Method not implemented.");
     }
+
     public getComponents(coord: import("../../coord").Coord): import("../../abstracts/abstract_boardcomponent").AbstractBoardComponent[] {
         throw new Error("Method not implemented.");
     }

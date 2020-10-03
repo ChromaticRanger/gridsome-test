@@ -1,11 +1,21 @@
 
-import { AbstractFixedValue } from '../../abstracts/abstract_fixedvalue';
+import { AbstractBoardComponent } from '../../abstracts/abstract_boardcomponent';
+import { Coord } from '../../coord';
+import { ComponentType } from '../../componenttype';
 
 //
 // SudokuFixedValue extends FixedValue which is a leaf component of a composite
 // heirarchy. It represents a given value at the start of a sudoku puzzle.
 //
-export class SudokuFixedValue extends AbstractFixedValue {
+export class SudokuFixedValue extends AbstractBoardComponent {
+
+    public getComponent(coord: Coord, comptype: ComponentType, canvas_width: number, canvas_height: number): AbstractBoardComponent {
+        throw new Error("Method not implemented.");
+    }
+
+    public getComponents(coord: import("../../coord").Coord): AbstractBoardComponent[] {
+        throw new Error("Method not implemented.");
+    }
     
     constructor(value: string, color: string) {
         super();

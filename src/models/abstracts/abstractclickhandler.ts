@@ -5,7 +5,7 @@ import { AbstractBoardComponent } from '../abstracts/abstract_boardcomponent';
 
 export abstract class AbstractClickHandler implements IClickComponent {
 
-    public cm: CanvasManager;
+    public cm!: CanvasManager;
 
     public abstract clickGame(game: AbstractBoardComponent): void;
     public abstract clickBoard(board: AbstractBoardComponent): void;    

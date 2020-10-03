@@ -6,9 +6,9 @@ import { MiniSudokuCell } from '../concretes/minisudoku/minisudoku_cell';
 //
 export abstract class CellState {
 
-    public name: string;
+    public name!: string;
 
-    protected context: MiniSudokuCell;
+    protected context!: MiniSudokuCell;
 
     public setContext(context: MiniSudokuCell) {
         this.context = context;
