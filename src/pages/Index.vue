@@ -18,11 +18,15 @@
 </template>
 
 <script lang="ts">
-export default {
-  metaInfo: {
-    title: 'Gridsome Test Page'
-  }
-}
+
+    console.log(`I am in the Index page`);
+
+    export default {
+      metaInfo: {
+        title: 'Puzzle Bouts'
+      }
+    }
+
 </script>
 
 <style>

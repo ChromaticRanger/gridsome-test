@@ -1,14 +1,29 @@
 <template>
-  <Layout>
-    <h1>About us</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error doloremque omnis animi, eligendi magni a voluptatum, vitae, consequuntur rerum illum odit fugit assumenda rem dolores inventore iste reprehenderit maxime! Iusto.</p>
-  </Layout>
+
+    <Layout>
+
+        <h2>Demo Page</h2>
+        <canvas 
+            id='my-canvas' 
+            tabindex='0' 
+            style="border: 3px solid black;">
+        </canvas>
+
+    </Layout>
+
 </template>
 
 <script lang="ts">
-export default {
-  metaInfo: {
-    title: 'About us'
-  }
-}
+
+    import { SystemColors, SystemKeys } from '../utility'
+
+    console.log(`I am in the About page`);
+    
+    export default {
+      metaInfo: {
+        title: 'About us'
+      }
+    
+    }
+
 </script>
